@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>481 AI Project</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+ <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="{{ url_for('home') }}">Mushroom Learning</a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url_for('home') }}">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url_for('aboutMushroomApp') }}">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url_for('classifyMushroom') }}">Classify</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <!-- Portfolio Section-->
+
+        <section class="page-section portfolio" id="portfolio" style="margin-top: 5%">
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <span class="badge badge-pill badge-danger">Warning</span>
+                Misidentified mushrooms can make you sick or kill you.
+                Do not eat mushrooms if you are not 100% certain of the identity.
+                Use many resources, and be skeptical of your own conclusions.
+                The site takes no responsibility for damage caused by wrong identifications.
+                If you continue, you agree to view this website under these terms.
+            </div>
+
+        </div>
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Mushroom Genus</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-code-branch"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Agaricus</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Amanita</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Boletus</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cortinarius</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Entoloma</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Hygrocybe</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Lactarius</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Russula</h6>
+                <h6 class="page-section-heading text-center text-uppercase text-secondary mb-0">Suillus</h6>
+
+            </div>
+        </section>
+
+
+
+    <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio" style="margin-top: 5%">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Setup</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-code-branch"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <ul>
+                <li>Tensorfow GPU software requirements
+                    <br />
+                    NVIDIA GPU drivers —CUDA 10.0 requires 418.x or higher
+                    <br />
+                    CUDA Toolkit —TensorFlow supports CUDA 10.0
+                    <br />
+                    CUPTI ships with the CUDA Toolkit
+                    <br />
+                    cuDNN SDK (>= 7.6)</li>
+
+                <li>create & active environment
+                    <br />
+                    conda env create -v -f tensorflow-gpu.yml</li>
+
+                <li>name: inceptionModel
+                <br />
+                dependencies:
+                    <br />
+                - python=3.7
+                     <br />
+                - pip>=19.0
+                     <br />
+                - jupyter
+                     <br />
+                - tensorflow-gpu=1.15.0
+                     <br />
+                - pandas=0.25.3
+                     <br />
+                - pandas-datareader
+                     <br />
+                - matplotlib=3.0.3
+                     <br />
+                - pillow=7.0.0
+                     <br />
+                - tqdm
+                     <br />
+                - requests
+                     <br />
+                - h5py
+                     <br />
+                - flask
+                     <br />
+                conda activate inceptionModel
+                </li>
+
+                <li>Test to see if tensorflow is working
+                     <br />
+                (tensorflow)C:\Users\username> python
+                     <br />
+                >>> import tensorflow as tf
+                     <br />
+                >>> print (tf.__version__)
+                     <br />
+                (should get 1.15.0)
+                     <br />
+                >>> quit()
+                     <br />
+                close command prompt</li>
+            </ul>
+
+            </div>
+        </section>
+
+<footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Joseph Santiago</h4>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Mushroom Learning App</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Santiago-Joseph/MachineLearning" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Spring 2020 CPSC 481-01 14082</h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+</body>
+</html>

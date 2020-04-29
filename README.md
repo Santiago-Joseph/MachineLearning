@@ -1,15 +1,24 @@
 # Get Tensorflow Setup
 Windows 10 setup
+
 Tensorfow GPU software requirements
+
 -NVIDIA GPU drivers —CUDA 10.0 requires 418.x or higher
+
 -CUDA Toolkit —TensorFlow supports CUDA 10.0 
+
 -CUPTI ships with the CUDA Toolkit
+
 -cuDNN SDK (>= 7.6)
+
 -(Optional) TensorRT 6.0 to improve latency and throughput for inference on some models
 
 Check your GPU
+
 -computer management
+
 -device manager
+
 -display adapters
 
 Install driver for your GPU
@@ -60,7 +69,7 @@ C:\Users\username> pip install opencv-python
 ">>> quit()"
 "close command prompt"
  
-#Running Project
+# Running Project
 Install Pycharm
 https://www.jetbrains.com/pycharm/
 

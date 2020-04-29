@@ -54,11 +54,11 @@ C:\Users\username> pip install opencv-python
  
  If you want to test to see if tensorflow is working
 (tensorflow)C:\Users\username> python
->>> import tensorflow as tf
->>> print (tf.__version__)
-(should get 1.15.0)
->>> quit()
-close command prompt
+">>> import tensorflow as tf"
+">>> print (tf.__version__)"
+"(should get 1.15.0)"
+">>> quit()"
+"close command prompt"
  
 #Running Project
 Install Pycharm

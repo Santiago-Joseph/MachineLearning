@@ -81,66 +81,143 @@
                 </div>
 
                 <ul>
-                <li>Tensorfow GPU software requirements
-                    <br />
-                    NVIDIA GPU drivers —CUDA 10.0 requires 418.x or higher
-                    <br />
-                    CUDA Toolkit —TensorFlow supports CUDA 10.0
-                    <br />
-                    CUPTI ships with the CUDA Toolkit
-                    <br />
-                    cuDNN SDK (>= 7.6)</li>
 
-                <li>create & active environment
-                    <br />
-                    conda env create -v -f tensorflow-gpu.yml</li>
+                # Get Tensorflow Setup
+                    <li>Windows 10 setup</li>
 
-                <li>name: inceptionModel
-                <br />
-                dependencies:
-                    <br />
-                - python=3.7
-                     <br />
-                - pip>=19.0
-                     <br />
-                - jupyter
-                     <br />
-                - tensorflow-gpu=1.15.0
-                     <br />
-                - pandas=0.25.3
-                     <br />
-                - pandas-datareader
-                     <br />
-                - matplotlib=3.0.3
-                     <br />
-                - pillow=7.0.0
-                     <br />
-                - tqdm
-                     <br />
-                - requests
-                     <br />
-                - h5py
-                     <br />
-                - flask
-                     <br />
-                conda activate inceptionModel
-                </li>
+                    <li>Tensorfow GPU software requirements</li>
 
-                <li>Test to see if tensorflow is working
-                     <br />
-                (tensorflow)C:\Users\username> python
-                     <br />
-                >>> import tensorflow as tf
-                     <br />
-                >>> print (tf.__version__)
-                     <br />
-                (should get 1.15.0)
-                     <br />
-                >>> quit()
-                     <br />
-                close command prompt</li>
-            </ul>
+                    <li>-NVIDIA GPU drivers —CUDA 10.0 requires 418.x or higher</li>
 
+                    <li>-CUDA Toolkit —TensorFlow supports CUDA 10.0</li>
+
+                    <li>-CUPTI ships with the CUDA Toolkit</li>
+
+                    <li>-cuDNN SDK (>= 7.6)</li>
+
+                    <li>-(Optional) TensorRT 6.0 to improve latency and throughput for inference on some models</li>
+
+
+<li>Check your GPU</li>
+
+                    <li>-computer management</li>
+
+                    <li>-device manager</li>
+
+                    <li>-display adapters</li>
+
+                    <li>Install driver for your GPU</li>
+
+                    <li>https://www.nvidia.com/download/index.aspx?lang=en-us</li>
+
+                    <li>Install CDUA toolkit 10.0</li>
+
+                    <li>https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal</li>
+
+                    <li>version 10, local</li>
+
+
+<li>Download cuDNN (create account to download)</li>
+
+                    <li>https://developer.nvidia.com/cudnn</li>
+
+                    <li>-Download cuDNN v7.6.5 (November 5th, 2019), for CUDA 10.0</li>
+
+
+<li>Create tools directory in C:\></li>
+
+                    <li>extract cuDNN and place cuda directory into tools directory</li>
+
+
+<li>On your taskbar, search: Edit the system environment</li>
+
+                    <li>-Select Environment Variables</li>
+
+                    <li>-Under System variables select Path and Edit</li>
+
+                    <li>-Add these new paths:</li>
+
+                    <li>	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin</li>
+
+                    <li>	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\extras\CUPTI\libx64</li>
+
+                    <li>	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include</li>
+
+                    <li>	C:\tools\cuda\bin</li>
+
+                    <li>	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp</li>
+
+
+<li>The tensorflow-gpu.yml file with have some of the dependecies needed.</li>
+
+                    <li>Move this file to User directory</li>
+
+
+<li>Install Miniconda</li>
+
+                    <li>https://docs.conda.io/en/latest/miniconda.html</li>
+
+                    <li>Get Python 3.7 version 64bit (32bit will not work)</li>
+
+
+<li>It is recommended by tensorflow to use a virtual Environment so we will make a conda enviroment</li>
+
+                    <li>create & activate environment from user/"name" directory where the yml file is</li>
+
+                    <li>Open command prompt:</li>
+
+                    <li>C:\Users\username> conda install jupyter</li>
+
+                    <li>C:\Users\username> conda env create -v -f tensorflow-gpu.yml</li>
+
+                    <li>C:\Users\username> conda activate inceptionModel   (environment name could be changed from yml file)</li>
+
+                    <li>C:\Users\username> pip install opencv-python</li>
+
+                    <li>(inceptionModel)C:\Users\username> python -m ipykernel install --user --name tensorflow --display-name "Python 3.7 (tensorflow)"</li>
+
+
+<li> If you want to test to see if tensorflow is working</li>
+
+                    <li>(inceptionModel)C:\Users\username> python</li>
+
+                    <li>">>> import tensorflow as tf"</li>
+
+                    <li>">>> print (tf.__version__)"</li>
+
+                    <li>"(should get 1.15.0)"</li>
+
+                    <li>">>> quit()"</li>
+
+                    <li>"close command prompt"</li>
+
+
+<li># Running Project</li>
+
+                    <li>Install Pycharm</li>
+
+                    <li>https://www.jetbrains.com/pycharm/</li>
+
+
+<li>open project in pycharm</li>
+
+                    <li>use terminal in pycharm</li>
+
+                    <li>C:\Users\username\Desktop\MachineLearning>conda activate inceptionModel</li>
+
+                    <li>(inceptionModel) C:\Users\username\Desktop\MachineLearning>python train.py</li>
+
+                    <li>(inceptionModel) C:\Users\username\Desktop\MachineLearning>python app.py</li>
+
+                    <li>This starts the flask server</li>
+
+                    <li>-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</li>
+
+                    <li>click on the link and the website should load in a browser</li>
+
+                    <li>The project currently does not delete user images so empty the  static/img directory each time you classify</li>
+
+</ul>
             </div>
         </section>
 

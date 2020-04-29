@@ -121,6 +121,8 @@ use terminal in pycharm
 
 C:\Users\username\Desktop\MachineLearning>conda activate inceptionModel
 
+(inceptionModel) C:\Users\username\Desktop\MachineLearning>python train.py
+
 (inceptionModel) C:\Users\username\Desktop\MachineLearning>python app.py
 
 This starts the flask server

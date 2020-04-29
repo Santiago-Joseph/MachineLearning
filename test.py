@@ -51,7 +51,7 @@ def mushroom():
                 confidence = classifiedMushrooms[0][classify]
                 if onMostLikelyPrediction:
                     scoreAsAPercent = confidence * 100.0
-                    info.append("the object appears to be a " + strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
+                    info.append("Your image appears to be " + strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% accuracy")
                     cv2.imshow(fileName, openCVImage)
                     onMostLikelyPrediction = False
                 info.append(strClassification + " (" +  "{0:.5f}".format(confidence) + ")")

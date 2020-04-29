@@ -51,7 +51,7 @@ On your taskbar, search: Edit the system environment
 
 -Under System variables select Path and Edit
 
-- Add these new paths:
+-Add these new paths:
 
 	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin
 	
@@ -125,7 +125,7 @@ C:\Users\username\Desktop\MachineLearning>conda activate inceptionModel
 
 This starts the flask server
 
--   * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 click on the link and the website should load in a browser
 
